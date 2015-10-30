@@ -203,6 +203,9 @@ $(document).ready(function(){
 			clearInterval(game.roundTimeout);
 			setTimeout( function(){
 				$('#options-area').slideDown();
+				$('#game-display').fadeOut();
+				$('#graphic-timer').hide();
+				$('#whackamole-game').fadeOut();
 			}, 5000);
 			$('.game-tile').off('click',game.tileClicked);
 		},
@@ -272,6 +275,9 @@ $(document).ready(function(){
 			game.animateMessage($('#score-display'),'fill up!',2000,1);
 			setTimeout( function(){
 				$('#options-area').slideDown();
+				$('#game-display').fadeOut();
+				$('#whackamole-game').fadeOut();
+				$('#graphic-timer').hide();
 			}, 3000);
 		},
 
@@ -299,6 +305,9 @@ $(document).ready(function(){
 			$('.game-tile').on('click',game.tileClicked);
 			game.startNewRound();
 			$('#options-area').slideUp();
+			$('#whackamole-game').fadeIn();
+			$('#game-display').fadeIn();
+			$('#graphic-timer').show();
 		}
 
 	}

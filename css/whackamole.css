@@ -15,8 +15,7 @@
 }
 
 .active{
-	background: url(/img/mole.jpg);
-	background-size: cover;
+	background-color: navy;
 }
 
 .options-element{
