@@ -1,6 +1,6 @@
 #whackamole-game{
-	height: 500px;
-	width: 600px;
+	height: 75vmin;
+	width: 90vmin;
 	position: relative;
 	display: block;
 }
@@ -53,7 +53,8 @@
 #game-display{
 	text-align: center;
 	font-family: 'Ubuntu Mono', monospace;
-	width: 250px;
+	width: 80vmin;
+	margin-left: 10vmin;
 }
 
 #message-display{
