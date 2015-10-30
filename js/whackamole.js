@@ -293,5 +293,21 @@ $(document).ready(function(){
 	$('#options-area h2').click(function(){
 		$(this).next().slideToggle();
 	});
+
+	if ($(window).height() > $(window).width()) {
+	    $('#whackamole-game').attr('class','eleven columns');
+	    $('#whackamole-game').css('height', ($(window).height() * 0.65) );
+		$('#graphic-timer').attr('class','one column');
+		$('#graphic-timer').css('height', ($(window).height() * 0.65) );
+		$('#game-display').attr('class','twelve columns');
+		$('#game-display').css('height', ($(window).height() * 0.3) );
+	} else {
+		$('#whackamole-game').attr('class','seven columns');
+		$('#whackamole-game').css('height', ($(window).height() * 0.95) );
+		$('#graphic-timer').attr('class','one column');
+		$('#graphic-timer').css('height', ($(window).height() * 0.95) );
+		$('#game-display').attr('class','four columns');
+		$('#game-display').css('height', ($(window).height() * 0.95) );
+	}
 	
 });
