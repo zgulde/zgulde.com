@@ -3,6 +3,31 @@ $(document).ready(function(){
         return Math.floor( (Math.random() * (max-min+1) + min) );
     }
 
+    function adjustSizes () {
+    	var windowHeight = $(window).height();
+    	var windowWidth = $(window).width();
+    	console.log("adjustSizes called!");
+
+    	if ( windowHeight > windowWidth ) {
+		    $('#whackamole-game').attr('class','eleven columns');
+		    $('#whackamole-game').css('height', (windowHeight * 0.65) );
+			$('#graphic-timer').attr('class','one column');
+			$('#graphic-timer').css('height', (windowHeight * 0.65) );
+			$('#game-display').attr('class','twelve columns');
+			$('#game-display').css('height', (windowHeight * 0.3) );
+		} else {
+			$('#whackamole-game').attr('class','seven columns');
+			$('#whackamole-game').css('height', (windowHeight * 0.95) );
+			$('#graphic-timer').attr('class','one column');
+			$('#graphic-timer').css('height', (windowHeight * 0.95) );
+			$('#game-display').attr('class','four columns');
+			$('#game-display').css('height', (windowHeight * 0.95) );
+		}
+
+		$('.game-tile').css('height',$('#whackamole-game').css('height')/3);
+		$('.game-tile').css('width',$('#whackamole-game').css('width')/3);
+    }
+
 	var whackamole = {
 
 		gameTiles: [],
@@ -66,11 +91,11 @@ $(document).ready(function(){
 
 		//numOfTiles must be a perfect square!
 		buildGame: function(numOfTiles){
-			var $gameArea = whackamole.buildGameArea();
 			var $optionsArea = whackamole.buildOptionsArea();
 			var tileHeight = whackamole.getGameAreaHeight()/Math.sqrt(numOfTiles);
 			var tileWidth = whackamole.getGameAreaWidth()/Math.sqrt(numOfTiles);
 
+			$('#whackamole-game').html('');
 
 			for(var i = 0; i < numOfTiles; i++){
 				
@@ -79,13 +104,10 @@ $(document).ready(function(){
 				gameTile.$html.css('height',tileHeight);
 				gameTile.$html.css('width',tileWidth);
 
-				gameTile.$html.appendTo($gameArea);
+				gameTile.$html.appendTo($('#whackamole-game'));
 				whackamole.gameTiles.push(gameTile);
 			}
 
-			$('#whackamole-game').html('');
-			$gameArea.css('position','absolute');
-			$gameArea.appendTo($('#whackamole-game'));
 
 		},
 
@@ -294,20 +316,10 @@ $(document).ready(function(){
 		$(this).next().slideToggle();
 	});
 
-	if ($(window).height() > $(window).width()) {
-	    $('#whackamole-game').attr('class','eleven columns');
-	    $('#whackamole-game').css('height', ($(window).height() * 0.65) );
-		$('#graphic-timer').attr('class','one column');
-		$('#graphic-timer').css('height', ($(window).height() * 0.65) );
-		$('#game-display').attr('class','twelve columns');
-		$('#game-display').css('height', ($(window).height() * 0.3) );
-	} else {
-		$('#whackamole-game').attr('class','seven columns');
-		$('#whackamole-game').css('height', ($(window).height() * 0.95) );
-		$('#graphic-timer').attr('class','one column');
-		$('#graphic-timer').css('height', ($(window).height() * 0.95) );
-		$('#game-display').attr('class','four columns');
-		$('#game-display').css('height', ($(window).height() * 0.95) );
-	}
+	$(window).resize(function(){
+		adjustSizes();
+	});
+
+	adjustSizes();
 	
 });
