@@ -293,5 +293,6 @@ $(document).ready(function(){
 	$('#options-area h2').click(function(){
 		$(this).next().slideToggle();
 	});
+	$('label').css('font-size',$('h2').css('font-size'));
 	
 });
