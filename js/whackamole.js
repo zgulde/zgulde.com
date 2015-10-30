@@ -1,4 +1,4 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 	function getRandomNumber(min,max){
         return Math.floor( (Math.random() * (max-min+1) + min) );
     }
@@ -288,5 +288,10 @@
 	});
 
 	whackamole.showIntructions();
+
+	$('#options-area h2').next().slideUp();
+	$('#options-area h2').click(function(){
+		$(this).next().slideToggle();
+	});
 	
-// });
+});
