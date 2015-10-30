@@ -79,4 +79,6 @@ button{
 	margin-top: 20px;
 }
 
-
+select{
+	height: 2em;
+}

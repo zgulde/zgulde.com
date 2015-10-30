@@ -249,7 +249,7 @@ $(document).ready(function(){
 			$('#options-area').hide();
 			game.animateMessage($('#moles-whacked'),'Don\'t let',0,1);
 			game.animateMessage($('#moles-shown'),'the board',1000,1);
-			game.animateMessage($('#score-display'),'get covered!',2000,1);
+			game.animateMessage($('#score-display'),'fill up!',2000,1);
 			setTimeout( function(){
 				$('#options-area').slideDown();
 			}, 3000);
