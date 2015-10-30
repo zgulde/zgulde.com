@@ -10,7 +10,7 @@
 	width: 3vmin;
 	position: absolute;
 	bottom: 0;
-	right: -30px;
+	right: -6vmin;
 	background-color: firebrick;
 }
 
@@ -18,7 +18,7 @@
 #options-area,
 #game-display{
 	float: left;
-	margin: 50px;
+	margin: 3vmin;
 }
 
 .game-tile{
@@ -39,7 +39,7 @@
 
 #options-area{
 	position: fixed;
-	top: 50px;
+	top: 10vmin;
 	left: 250px;
 	margin: auto;
 	box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
