@@ -50,11 +50,19 @@
 	border-radius: 5%;
 }
 
+#options-area *{
+	font-size: 2.5em;
+}
+
 #game-display{
 	text-align: center;
 	font-family: 'Ubuntu Mono', monospace;
 	width: 80vmin;
 	margin-left: 10vmin;
+}
+
+#game-display h3{
+	font-size: 2.5em;
 }
 
 #message-display{
