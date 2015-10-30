@@ -83,7 +83,7 @@ $(document).ready(function(){
 				whackamole.gameTiles.push(gameTile);
 			}
 
-			$('#whackamole-game').html('<div id="graphic-timer"></div>');
+			$('#whackamole-game').html('');
 			$gameArea.css('position','absolute');
 			$gameArea.appendTo($('#whackamole-game'));
 

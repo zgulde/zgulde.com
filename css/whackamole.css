@@ -1,24 +1,11 @@
 #whackamole-game{
 	height: 75vmin;
-	width: 90vmin;
 	position: relative;
-	display: block;
 }
 
 #graphic-timer{
 	height: 75vmin;
-	width: 3vmin;
-	position: absolute;
-	bottom: 0;
-	right: -6vmin;
 	background-color: firebrick;
-}
-
-#whackamole-game,
-#options-area,
-#game-display{
-	float: left;
-	margin: 3vmin;
 }
 
 .game-tile{
@@ -38,13 +25,8 @@
 }
 
 #options-area{
-	position: fixed;
-	top: 10vmin;
-	left: 25vw;
-	width: 90vmin;
 	box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
 	background-color: green;
-	margin: 3vmin;
 	text-align: center;
 	padding: 10vmin 20vmin;
 	border-radius: 5%;
@@ -65,8 +47,6 @@ h3{
 #game-display{
 	text-align: center;
 	font-family: 'Ubuntu Mono', monospace;
-	width: 80vmin;
-	margin-left: 10vmin;
 }
 
 #game-display h3{
