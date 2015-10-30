@@ -1,0 +1,209 @@
+body{
+    background-color: #bbb;
+    transition: all 0.3s;
+}
+
+#game{
+    width: 500px;
+    height: 500px;
+    margin-left: 150px;
+    margin-top: 40px;
+    position: relative;
+    border-radius: 50%;
+    border: 15px solid #555;
+    box-shadow: 0 0 5px 8px black;
+    display: inline-block;
+    transition: all 0.3s linear;
+}
+
+#middle-btn{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 175px;
+    right: 175px;
+    background-color: #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 #aaa;
+    overflow: hidden;
+    padding: 45px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+#middle-btn:hover{
+    background-color: #111;
+    border: 2px solid #999;
+}
+
+#middle-btn:active{
+    background-color: #222;
+    border: 4px solid #999;
+}
+
+#middle-btn-text{
+    font-family: monospace;
+    color: white;
+    font-size: 20px;
+}
+
+.color-btn{
+    overflow: hidden;
+    float: left;
+    height: 250px;
+    width: 250px;
+    box-sizing: border-box;
+    opacity: 0.3;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.color-btn:hover{
+    opacity: 0.65;
+}
+
+.light-up,
+.color-btn:active{
+    opacity: 1 !important;
+}
+
+#green{
+    background: radial-gradient(circle at bottom right, white, green, green 60%, black);
+    border-radius: 100% 0 0 0;
+}
+
+#green:hover{
+    box-shadow: 0 0 50px green;
+}
+.green-lit,
+#green:active{
+    box-shadow: 0 0 100px green;
+}
+
+#red{
+    background: radial-gradient(circle at bottom left, white, red, red 60%, black);
+    border-radius: 0 100% 0 0;
+}
+
+#red:hover{
+    box-shadow: 0 0 50px red;
+}
+
+.red-lit,
+#red:active{
+    box-shadow: 0 0 100px red;
+}
+
+#yellow{
+    background: radial-gradient(circle at top right, white, yellow, yellow 60%, black);
+    border-radius: 0 0 0 100%;
+}
+
+#yellow:hover{
+    box-shadow: 0 0 50px yellow;
+}
+
+.yellow-lit,
+#yellow:active{
+    box-shadow: 0 0 100px yellow;
+}
+
+#blue{
+    background: radial-gradient(circle at top left, white, blue, blue 60%, black);
+    border-radius: 0 0 100% 0;
+}
+
+#blue:hover{
+    box-shadow: 0 0 50px blue;
+}
+
+.blue-lit,
+#blue:active{
+    box-shadow: 0 0 100px blue;
+}
+
+#options-area {
+    font-family: sans-serif;
+    position: relative;
+    width: 20%;
+    margin: 0 25px;
+    /*height: 500px;*/
+    border-radius: 3%;
+    background-color: #ddd;
+    box-shadow: 2px 2px 2px black;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+}
+
+label{
+    display: block;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+select{
+    height: 30px;
+    line-height: 30px;
+    background: #eee;
+    font-size: 1em;
+    box-shadow: 2px 2px 2px 0 black;
+    transition: all 0.3s;
+}
+
+select:hover{
+    box-shadow: 1px 1px 2px 2px black;
+}
+
+select:focus{
+    outline: 0;
+}
+
+button{
+    position: relative;
+    display: block;
+    height: 40px;
+    padding: 10px 15px;
+    border-radius: 5%;
+    margin: 10px;
+    font-size: 1em;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.2s;
+    box-shadow: 0 0 2px 1px black;
+    background-color: #eee;
+    color: #111;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: #111;
+    color: #eee;
+}
+
+button:active{
+    box-shadow: 0 0 0 black;
+}
+
+button:focus{
+    outline: 0;
+}
+
+/* --caution!--: below lies the button hover glint effect */
+
+button:before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 150%;
+    left: 150%;
+    background: linear-gradient(to bottom right, rgba(255,255,255,0) 40%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 60%);
+    transition: all 0.5s linear;
+}
+
+button:hover:before {
+  top: -150%;
+  left: -150%;   
+}

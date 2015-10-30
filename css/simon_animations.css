@@ -1,0 +1,37 @@
+@keyframes spin{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin-shrink{
+	50%{
+		transform: scale(0) rotateY(900deg);
+	}
+	100%{
+		transform: scale(1) rotateY(0);
+	}
+}
+
+/*animation-duration is set in startNewRound() in js file*/
+.moving{
+	animation-name: spin;
+	animation-direction: normal;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.flip{
+	transform: rotateY(90deg);
+}
+
+.end-game-anim{
+	animation-name: spin-shrink;
+	animation-duration: 3s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.65,.09,.65,2);
+}
