@@ -1,0 +1,13 @@
+@keyframes typing{
+	from { width: 100%; }
+	to { width: 0; }
+}
+
+.typing-span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	background-color: white;
+	border-left: 1px solid black;
+}

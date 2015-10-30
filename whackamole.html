@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Whack-A-Mole!</title>
+	<link rel="stylesheet" href="css/whackamole.css">
+	<link rel="stylesheet" href="css/wam_animations.css">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="whackamole-game"></div>
+	<div id="game-display">
+		<div>
+			<h2 id="message-display" class="display-element">Whack-A-Mole!</h2>
+		</div>
+		<div>
+			<h3 id="moles-whacked" class="display-element"></h3>
+		</div>
+		<div>
+			<h3 id="moles-shown" class="display-element"></h3>
+		</div>
+		<div>
+			<h3 id="score-display" class="display-element"></h3>
+		</div>
+	</div>
+	<div id="options-area">
+		<h2>Options</h2>
+		<label for="number-of-tiles-select">Board Size</label>
+		<select id="number-of-tiles-select" class="options-select">
+			<option value="4">small</option>
+			<option value="9" selected>medium</option>
+			<option value="16">large</option>
+			<option value="25">extra large</option>
+		</select>
+		<label for="round-length-select">Round Time</label>
+		<select id="round-length-select" class="options-select">
+			<option value="10000">10s</option>
+			<option value="20000" selected>20s</option>
+			<option value="30000">30s</option>
+		</select>
+		<label for="percent-loss-select">Percent</label>
+		<select id="percent-loss-select" class="options-select">
+			<option value="0.5">50%</option>
+			<option value="0.75" selected>75%</option>
+			<option value="1">100%</option>
+		</select>
+		<button id="start-btn">start!</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/whackamole.js"></script>
+</body>
+</html>
