@@ -118,11 +118,11 @@ $(document).ready(function(){
 		startNewRound: function(){
 			var game = this;
 			game.currentRound++;
-			game.animateMessage($('#message-display'),'Round ' + game.currentRound,4100);
-			game.eraseMessage($('#message-display'),3000);
-			game.eraseMessage($('#moles-whacked'),2000);
-			game.eraseMessage($('#moles-shown'),1000);
-			game.eraseMessage($('#score-display'));
+			game.animateMessage($('#message-display'),'Round ' + game.currentRound,1000);
+			game.eraseMessage($('#message-display'));
+			game.eraseMessage($('#moles-whacked'),2500);
+			game.eraseMessage($('#moles-shown'),2000);
+			game.eraseMessage($('#score-display'),1500);
 			
 			game.startRoundTimer();
 
@@ -154,8 +154,8 @@ $(document).ready(function(){
 
 		endRound: function(){
 			var game = this;
-			game.animateMessage($('#moles-whacked'),'Moles Whacked: ' + game.molesWhacked);
-			game.animateMessage($('#moles-shown'),'Moles Shown: ' + game.molesShown,1000);
+			game.animateMessage($('#moles-whacked'),'Hit: ' + game.molesWhacked);
+			game.animateMessage($('#moles-shown'),'Shown: ' + game.molesShown,1000);
 			game.animateMessage($('#score-display'),'Score: ' + game.score,2000);
 
 			game.setWhackingPercentage();
@@ -177,7 +177,7 @@ $(document).ready(function(){
 			game.animateMessage($('#message-display'),'Game Over!',0,2);
 			$('#moles-shown').html('');
 			game.setWhackingPercentage();
-			game.animateMessage($('#moles-whacked'),'Whacking Percentage: ' + parseInt( (game.whackingPercentage*100) ) + '%',1000);
+			game.animateMessage($('#moles-whacked'),'Hit %: ' + parseInt( (game.whackingPercentage*100) ) + '%',1000);
 			game.animateMessage($('#moles-shown'),'Score: ' + game.score,2000);
 			clearInterval(game.roundInterval);
 			clearInterval(game.roundTimeout);
@@ -247,9 +247,9 @@ $(document).ready(function(){
 		showIntructions: function(){
 			var game = this;
 			$('#options-area').hide();
-			game.animateMessage($('#moles-whacked'),'You lose when the moles',0,1);
-			game.animateMessage($('#moles-shown'),'cover your selected',1000,1);
-			game.animateMessage($('#score-display'),'percentage of the board.',2000,1);
+			game.animateMessage($('#moles-whacked'),'Don\'t let',0,1);
+			game.animateMessage($('#moles-shown'),'the board',1000,1);
+			game.animateMessage($('#score-display'),'get covered!',2000,1);
 			setTimeout( function(){
 				$('#options-area').slideDown();
 			}, 3000);
@@ -271,9 +271,9 @@ $(document).ready(function(){
 			game.options.roundLength = parseInt($('#round-length-select').val());
 			game.molesToWhack = game.options.numberOfTiles;
 
-			game.eraseMessage($('#moles-whacked'),2000);
-			game.eraseMessage($('#moles-shown'),1000);
-			game.eraseMessage($('#score-display'));
+			game.eraseMessage($('#moles-whacked'),3000);
+			game.eraseMessage($('#moles-shown'),2000);
+			game.eraseMessage($('#score-display'),1000);
 			
 			game.buildGame(game.options.numberOfTiles);
 			$('.game-tile').on('click',game.tileClicked);
