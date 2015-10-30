@@ -57,7 +57,8 @@
 h2,
 label,
 select,
-button{
+button,
+h3{
 	font-size: 3em;
 }
 
