@@ -40,13 +40,13 @@
 #options-area{
 	position: fixed;
 	top: 10vmin;
-	left: 250px;
-	margin: auto;
+	left: 25vw;
+	width: 90vmin;
 	box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
 	background-color: green;
-	margin: 0 auto;
+	margin: 3vmin;
 	text-align: center;
-	padding: 50px 100px;
+	padding: 10vmin 20vmin;
 	border-radius: 5%;
 }
 
