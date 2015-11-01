@@ -1,3 +1,51 @@
-h1{
-	color: firebrick;
+*{
+	box-sizing: border-box;
+}
+
+#biopic{
+	background: url(/img/biopic.jpg);
+	background-size: cover;
+	height: 200px;
+	border-radius: 5%;
+}
+
+.navlink{
+	font-size: 3rem;
+	text-align: center;
+}
+
+.navlink:hover{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.navlink:active{
+	background: #eee;
+}
+
+#navbar{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.row{
+	margin: 10px 0;
+}
+
+.project{
+	border-bottom: 1px solid black;
+}
+
+.project-title{
+	padding: 10px;
+	text-align: center;
+}
+
+.project-description{
+	padding: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: navy;
 }

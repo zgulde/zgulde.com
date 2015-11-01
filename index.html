@@ -3,13 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Zach Gulde</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Hello, World!</h1>
-	<p>
-		Check out my <a href="simon.html">simon</a> and <a href="whackamole.html">whack-a-mole</a> (under development!) games.
-	</p>
+	<div class="container" >
+		<div class="row">
+			<div class="nine columns">
+				<h1>Zach Gulde</h1>
+				<h5>Web Developer, Weekend Bartender, Full-Time Father</h5>
+			</div>
+			<div class="three columns" id="biopic"></div>
+		</div>
+		<div class="row" id="navbar">
+			<div class="four columns navlink"><a href="#projects"></a>Projects</div>
+			<div class="four columns navlink"><a href="#personal"></a>Personal</div>
+			<div class="four columns navlink"><a href="#contact"></a>Contact</div>
+		</div>
+		<a id="projects"></a>
+		<div class="row project">
+			<div class="four columns project-title">
+				<h4><a href="whackamole.html">Whack-A-Mole!</a></h4>
+			</div>
+			<div class="eight columns project-description">
+				<p>
+					Whack-A-Mole game written in HTML, CSS, and JavaScript with Jquery. Written to look great on any screen! Check it out on your phone, change your screen orientation, or resize your window to see. Apart from responsiveness, I tried to focus on creating a clean, simple UI. I also took an object-oriented approach to the design of the javascript part of the game.
+				</p>
+			</div>
+		</div>
+		<div class="row project">
+			<div class="four columns project-title">
+				<h4><a href="simon.html">Simple Simon</a></h4>
+			</div>
+			<div class="eight columns project-description">
+				<p>Simple Simon game written in HTML, CSS, and JavaScript with Jquery. I spent a lot of time on the sounds, go play with all the different notes! A major focus for me on this project was UI styling; I wanted the buttons to look great (hover and click on all of them to see what I mean). I also had some fun with CSS animations here. Unfortunately the sounds do not work well on mobile.</p>
+			</div>
+		</div>
+		<a id="personal"></a>
+		<div class="row personal">
+			
+		</div>
+	</div>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
