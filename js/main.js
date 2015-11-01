@@ -19,14 +19,14 @@ $(document).ready(function(){
 		}
 	}
 
-	function toggleModal($modal){
+	function openModal($modal){
 		console.log($modal);
-		$modal.toggleClass('modal-open');
+		$modal.addClass('modal-open');
 		setTimeout( function(){
 			$(document).on('click',function(e){
 				console.log("document clicked!");
 				if ( e.target != $modal.get(0) ) {
-				    $modal.toggleClass('modal-open');
+				    $modal.removeClass('modal-open');
 				    $(document).off('click')
 				}
 			});
@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 	$('.modal-trigger').on('click',function(){
 		var $modal = $('#'+$(this).attr('target'));
-		toggleModal($modal);
+		openModal($modal);
 	});
 
 	$window.on('scroll', onScroll);
