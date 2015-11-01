@@ -2,11 +2,8 @@
 	box-sizing: border-box;
 }
 
-#biopic{
-	background: url(/img/biopic.jpg);
-	background-size: cover;
-	height: 200px;
-	border-radius: 5%;
+img{
+	border-radius: 3%;
 }
 
 .navlink{
@@ -23,17 +20,21 @@
 	background: #eee;
 }
 
+.navlink a{
+	color: black;
+}
+
 #navbar{
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 
 .row{
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .project{
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #aaa;
 }
 
 .project-title{
@@ -48,4 +49,8 @@
 a{
 	text-decoration: none;
 	color: navy;
+}
+
+.heading{
+	text-align: center;
 }
