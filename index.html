@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container" >
+	<div class="container">
 		<div class="row">
 			<div class="nine columns">
 				<h1>Zach Gulde</h1>
@@ -18,12 +18,15 @@
 				<img src="/img/biopic.jpg" alt="me" class="u-max-full-width" id="biopic">
 			</div>
 		</div>
-		<div class="row" id="navbar">
-			<div class="four columns navlink"><a href="#projects">Projects</a></div>
-			<div class="four columns navlink"><a href="#personal">Personal</a></div>
-			<div class="four columns navlink"><a href="#contact">Contact</a></div>
-		</div>
-		<a id="projects"></a>
+	</div>
+	<div id="navbar-space"></div>
+	<nav id="navbar">
+		<a href="#projects">Projects</a>
+		<a href="#personal">Personal</a>
+		<a href="#contact">Contact</a>
+	</nav>
+	<div class="container">
+		<a id="projects" class="navlink"></a>
 		<div class="row heading">
 			<h2>Projects</h2>
 		</div>
@@ -51,7 +54,7 @@
 				<p>Take a look at my <a href="http://codepen.io/zgulde">codepen</a> for some code snippets.</p>
 			</div>
 		</div>
-		<a id="personal"></a>
+		<a id="personal" class="navlink"></a>
 		<div class="row heading">	
 			<h2>Personal</h2>
 		</div>
@@ -78,7 +81,9 @@
 				<p>Ryan enjoys bathtime, naps, and his walker. He is also very seriuos about his food.</p>
 			</div>
 		</div>
+
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

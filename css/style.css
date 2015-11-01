@@ -7,26 +7,32 @@ img{
 }
 
 .navlink{
-	font-size: 3rem;
-	text-align: center;
+	position: relative;
+	top: -60px;
+	display: block;
+	visibility: hidden;
 }
 
-.navlink:hover{
+
+#navbar a{
+	color: black;
+	font-size: 2.5rem;
+	padding: 0 25px;
+}
+
+#navbar a:hover{
 	border-left: 1px solid black;
 	border-right: 1px solid black;
-}
-
-.navlink:active{
-	background: #eee;
-}
-
-.navlink a{
-	color: black;
 }
 
 #navbar{
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
+	padding: 2px;
+	background-color: white;
+	width: 100%;
+	z-index: 10;
+	text-align: center;
 }
 
 .row{
@@ -53,4 +59,19 @@ a{
 
 .heading{
 	text-align: center;
+}
+
+.navbar-docked #navbar{
+	position: fixed;
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+
+#navbar-space{
+	height: 0;
+}
+
+.navbar-docked #navbar-space{
+	height: 60px;
 }
