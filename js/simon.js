@@ -348,7 +348,7 @@ $(document).ready(function(){
             playLittleLamb();
         });
     })();
-    //audio loading bar
+    //audio loading barx
     (function(){
         var x = 0;
         var $loadingBar = $('#loading-bar');

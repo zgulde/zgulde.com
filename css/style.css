@@ -17,7 +17,8 @@ img{
 #navbar a{
 	color: black;
 	font-size: 2.5rem;
-	padding: 0 25px;
+	padding: 0 20px;
+	margin: 0 10px;
 	display: inline-block;
 }
 
@@ -56,6 +57,13 @@ img{
 a{
 	text-decoration: none;
 	color: navy;
+}
+
+#navbar a:active,
+.nav-current{
+	text-decoration: underline;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 }
 
 .heading{
@@ -97,4 +105,12 @@ a{
 .modal-open{
 	display: block;
 	width: 80%;
+}
+
+.icon-btn{
+	padding: 5px 10px;
+}
+
+body{
+	padding-bottom: 800px;
 }

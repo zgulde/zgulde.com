@@ -1,6 +1,8 @@
-$(document).ready(function(){
+"use strict";
+// $(document).ready(function(){
 	var $body = $('body');
 	var $window = $(window);
+	var $dom = $(document);
 	var navOffsetTop = $('#navbar').offset().top;
 
 
@@ -10,24 +12,44 @@ $(document).ready(function(){
 		onScroll();
 	}
 
+	$('#projects').text('color','red');
+
 	function onScroll() {
-		if(navOffsetTop < $window.scrollTop() && !$body.hasClass('navbar-docked')) {
+		var windowPosition = $window.scrollTop();
+		var projectsOffset = $('#projects').offset().top;
+		var personalOffset = $('#personal').offset().top;
+		var contactOffset = $('#contact').offset().top;
+
+		//set current navlink
+		$('#navbar a').removeClass('nav-current');
+		if(windowPosition >= projectsOffset && windowPosition < personalOffset){
+			$('#projects-nav').addClass('nav-current');
+		}
+		if(windowPosition >= personalOffset && windowPosition < contactOffset){
+			$('#personal-nav').addClass('nav-current');
+		}
+		if(windowPosition >= contactOffset){
+			$('#contact-nav').addClass('nav-current');
+		}
+
+		//navbar docking
+		if(navOffsetTop < windowPosition && !$body.hasClass('navbar-docked')) {
 			$body.addClass('navbar-docked');
 		}
-		if(navOffsetTop > $window.scrollTop() && $body.hasClass('navbar-docked')) {
+		if(navOffsetTop > windowPosition && $body.hasClass('navbar-docked')) {
 			$body.removeClass('navbar-docked');
 		}
 	}
 
 	function openModal($modal){
-		console.log($modal);
 		$modal.addClass('modal-open');
 		setTimeout( function(){
-			$(document).on('click',function(e){
-				console.log("document clicked!");
+			$dom.on('click',function(e){
+				e.preventDefault();
+				console.log(e);
 				if ( e.target != $modal.get(0) ) {
 				    $modal.removeClass('modal-open');
-				    $(document).off('click')
+				    $dom.off('click')
 				}
 			});
 		}, 300);
@@ -40,4 +62,6 @@ $(document).ready(function(){
 
 	$window.on('scroll', onScroll);
     $window.on('resize', resize);
-});
+
+
+// });
