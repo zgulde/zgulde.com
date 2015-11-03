@@ -1,8 +1,6 @@
 //todo: 
-//make searchResults part of the forecastOptions object ? 
 //refactor inputs to be within a form, can prevent page refresh with
 // .preventDefault()
-//get rid of one of the go buttons
 $(document).ready(function(){
 	var mapOptions = {
         zoom: 10,
