@@ -6,6 +6,7 @@ $(document).ready(function(){
     function adjustSizes () {
     	var windowHeight = $(window).height();
     	var windowWidth = $(window).width();
+    	var tileSize = Math.sqrt(whackamole.options.numberOfTiles);
 
     	if ( windowHeight > windowWidth ) {
 		    $('#whackamole-game').attr('class','eleven columns');
@@ -22,8 +23,8 @@ $(document).ready(function(){
 			$('#game-display').attr('class','four columns');
 			$('#game-display').css('height', (windowHeight * 0.95) );
 		}
-		$('.game-tile').css('height',$('#whackamole-game').height()/3);
-		$('.game-tile').css('width',$('#whackamole-game').width()/3);
+		$('.game-tile').css('height',$('#whackamole-game').height()/tileSize);
+		$('.game-tile').css('width',$('#whackamole-game').width()/tileSize);
     }
 
 	var whackamole = {
