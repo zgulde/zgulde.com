@@ -348,4 +348,19 @@ $(document).ready(function(){
             playLittleLamb();
         });
     })();
+    //audio loading bar
+    (function(){
+        var x = 0;
+        var $loadingBar = $('#loading-bar');
+        var maxWidth = $loadingBar.width();
+        $loadingBar.width(0);
+        for(var note in musicalNotes){
+            musicalNotes[note].oncanplaythrough = function(){
+                x++;
+                $loadingBar.width( (x / 37) * maxWidth );
+                $loadingBar.text( (x/37*100).toFixed(0) + '%' );
+                if($loadingBar.width() === maxWidth) $loadingBar.fadeOut(500);
+            }
+        }
+    })();
 });

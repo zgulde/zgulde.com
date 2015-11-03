@@ -190,6 +190,29 @@ button:focus{
     outline: 0;
 }
 
+#loading-bar{
+    box-sizing: border-box;
+    clear: both;
+    width: 500px;
+    background-color: purple;
+    color: white;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+#loading-bar:before{
+    content: 'loading audio...';
+    position: absolute;
+    bottom: -2em;
+    color: black;
+    text-shadow: 2px 2px 0 white, 2px 2px 0 white;
+    font-size: 1.5em;
+    width: 200px;
+}
+
 /* --caution!--: below lies the button hover glint effect */
 
 button:before {
