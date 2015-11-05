@@ -1,118 +1,152 @@
-*{
-	box-sizing: border-box;
-}
+* {
+  box-sizing: border-box; }
 
-img{
-	border-radius: 3%;
-}
+img {
+  border-radius: 5px; }
 
-.navlink{
-	position: relative;
-	top: -60px;
-	display: block;
-	visibility: hidden;
-}
+body {
+  padding-bottom: 800px;
+  background: url(/img/concrete_seamless.png);
+  background-attachment: fixed; }
 
+a {
+  text-decoration: none;
+  color: navy; }
 
-#navbar a{
-	color: black;
-	font-size: 2.5rem;
-	padding: 0 20px;
-	margin: 0 10px;
-	display: inline-block;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
-}
+.swatch {
+  height: 50px;
+  width: 50px; }
 
-#navbar a:hover{
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-}
+.swatches {
+  position: fixed;
+  right: 5px;
+  bottom: 0; }
 
-#navbar{
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-	padding: 2px;
-	background-color: white;
-	width: 100%;
-	z-index: 2;
-	text-align: center;
-}
+.area {
+  width: 100%;
+  margin: 0; }
 
-.row{
-	margin: 20px 0;
-}
+.navlink {
+  position: relative;
+  top: -60px;
+  display: block;
+  visibility: hidden; }
 
-.project{
-	border-bottom: 1px solid #aaa;
-}
+#navbar {
+  border-top: 1px solid #5C832F;
+  border-bottom: 1px solid #5C832F;
+  padding: 2px;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  background-color: #363942; }
+  #navbar a {
+    color: white;
+    font-size: 2.5rem;
+    padding: 0 20px;
+    margin: 0 10px;
+    display: inline-block;
+    border-left: 3px solid #363942;
+    border-right: 3px solid #363942; }
+  #navbar a:hover,
+  #navbar a:active,
+  #navbar .nav-current {
+    color: #D8CAA8;
+    border-left: 3px solid #5C832F;
+    border-right: 3px solid #5C832F; }
+  #navbar a:active,
+  #navbar .nav-current {
+    text-decoration: underline; }
 
-.project-title{
-	padding: 10px;
-	text-align: center;
-}
+.row {
+  margin: 20px 0; }
 
-.project-description{
-	padding: 10px;
-}
+.project {
+  border-bottom: 1px solid #aaa; }
 
-a{
-	text-decoration: none;
-	color: navy;
-}
+.project-title {
+  padding: 10px;
+  text-align: center; }
 
-#navbar a:active,
-#navbar .nav-current{
-	text-decoration: underline;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-}
+.project-description {
+  padding: 10px; }
 
-.heading{
-	text-align: center;
-}
+.heading {
+  text-align: center;
+  margin-bottom: 30px; }
+  .heading h2 {
+    margin: 0; }
 
-.navbar-docked #navbar{
-	position: fixed;
-	margin: 0;
-	top: 0;
-	left: 0;
-}
+#title-area {
+  background-color: #363942;
+  color: white;
+  padding-bottom: 200px; }
 
-#navbar-space{
-	height: 0;
-}
+#personal-area {
+  background-color: #284907;
+  color: white; }
 
-.navbar-docked #navbar-space{
-	height: 60px;
-}
+#navbar-space {
+  height: 0; }
 
-.modal{
-	position: fixed;
-	top: 50px;
-	background-color: black;
-	color: white;
-	display: none;
-	padding: 100px 50px;
-	margin-left: 10%;
-	width: 0;
-	text-align: center;
-	box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
-	border-radius: 20px;
-	transition: all 1s;
-	z-index: 10;
-	font-size: 3rem;
-}
+.navbar-docked #navbar {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0; }
+.navbar-docked #navbar-space {
+  height: 60px; }
 
-.modal-open{
-	display: block;
-	width: 80%;
-}
+.modal {
+  position: fixed;
+  top: 50px;
+  background-color: black;
+  color: white;
+  display: none;
+  padding: 100px 50px;
+  margin-left: 10%;
+  width: 0;
+  text-align: center;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  transition: all 1s;
+  z-index: 10;
+  font-size: 3rem; }
 
-.icon-btn{
-	padding: 5px 10px;
-}
+.modal-open {
+  display: block;
+  width: 80%; }
 
-body{
-	padding-bottom: 800px;
-}
+.container {
+  padding-top: 50px; }
+
+.card-2,
+.card-1,
+.card-0,
+.card-3,
+.card-4 {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 2px black;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.card-0 {
+  background-color: #D8CAA8; }
+
+.card-1 {
+  background-color: #5C832F; }
+
+.card-2 {
+  background-color: #284907;
+  color: white; }
+
+.card-3 {
+  background-color: #382513;
+  color: white; }
+
+.card-4 {
+  background-color: #363942;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */
