@@ -1,5 +1,5 @@
 "use strict";
-// $(document).ready(function(){
+$(document).ready(function(){
 	var $body = $('body');
 	var $window = $(window);
 	var $dom = $(document);
@@ -66,8 +66,9 @@
     $('#navbar a').on('click',function(e){
     	var scrollTo = $( $(this).attr('href') ).offset().top;
     	e.preventDefault();
+    	if ($window.scrollTop() < navOffsetTop) scrollTo+=20;
     	$('body, html').animate({"scrollTop": scrollTo},500);
     });
 
 
-// });
+});
