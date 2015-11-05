@@ -47,7 +47,8 @@ a {
     margin: 0 10px;
     display: inline-block;
     border-left: 3px solid #363942;
-    border-right: 3px solid #363942; }
+    border-right: 3px solid #363942;
+    transition: all 0.3s; }
   #navbar a:hover,
   #navbar a:active,
   #navbar .nav-current {
