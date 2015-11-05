@@ -101,7 +101,7 @@ a {
 .modal {
   position: fixed;
   top: 50px;
-  background-color: black;
+  background-color: #363942;
   color: white;
   display: none;
   padding: 100px 50px;
@@ -113,6 +113,8 @@ a {
   transition: all 1s;
   z-index: 10;
   font-size: 3rem; }
+  .modal a {
+    color: white; }
 
 .modal-open {
   display: block;
