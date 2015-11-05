@@ -63,5 +63,11 @@
 	$window.on('scroll', onScroll);
     $window.on('resize', resize);
 
+    $('#navbar a').on('click',function(e){
+    	var scrollTo = $( $(this).attr('href') ).offset().top;
+    	e.preventDefault();
+    	$('body, html').animate({"scrollTop": scrollTo},500);
+    });
+
 
 // });
