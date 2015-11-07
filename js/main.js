@@ -45,7 +45,6 @@ $(document).ready(function(){
 		$modal.addClass('modal-open');
 		setTimeout( function(){
 			$dom.on('click',function(e){
-				e.preventDefault();
 				if ( (e.target != $modal.get(0) ) && (e.target != $modal.children().get(0) ) ) {
 				    $modal.removeClass('modal-open');
 				    $dom.off('click')
