@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypedMessage Demo</title>
+    <style>
+        @keyframes typing{
+            from { width: 100%; }
+            to { width: 0; }
+        }
+
+        #display{
+            position: relative;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <input id="text-input" type="text" placeholder="text to animate...">
+    <select id="duration-select">
+        <option disabled selected>Animation Duration</option>
+        <option value="1">1s</option>
+        <option value="2">2s</option>
+        <option value="3">3s</option>
+        <option value="4">4s</option>
+        <option value="5">5s</option>
+        <option value="6">6s</option>
+        <option value="7">7s</option>
+        <option value="8">8s</option>
+        <option value="9">9s</option>
+        <option value="10">10s</option>
+    </select>
+    <select id="delay-select">
+        <option disabled selected>Animation Delay</option>
+        <option value="0">0s</option>
+        <option value="1">1s</option>
+        <option value="2">2s</option>
+        <option value="3">3s</option>
+        <option value="4">4s</option>
+        <option value="5">5s</option>
+    </select>
+    <button id="show-btn">show</button>
+    <button id="erase-btn">erase</button>
+    <h2><span id="display"></span></h2>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/typedMessage.js"></script>
+    <script>
+    (function(){
+        var message = new TypedMessage($('#display'));
+        var $input = $('#text-input');
+
+        message.text('Hello, World!');
+
+        $('#show-btn').click(function(){
+            message.text( $input.val() );
+            message.show();
+        });
+
+        $('#erase-btn').click(function(){
+            message.erase();
+        });
+
+        $('#duration-select').change(function(){
+            message.duration( parseInt( $(this).val() ) );
+        });
+
+        $('#delay-select').change(function(){
+            message.delay( parseInt( $(this).val() ) );
+        });
+    })();
+    </script>
+</body>
+</html>
