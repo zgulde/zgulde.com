@@ -32,5 +32,12 @@ function getPassword (length) {
 }
 
 $('#generate-btn').click(function(){
-    $('#pwd-display').val(getPassword(10) );
+    var length = parseInt($('#length-select').val());
+    var password = getPassword(length);
+    animateMessage($('#display'), password);
+    $('#pwd-display').val(password);
+});
+
+$('#pwd-display').click(function(){
+    $(this).select();
 });
