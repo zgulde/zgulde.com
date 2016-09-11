@@ -1,12 +1,12 @@
 function TypedMessage($display, message, animationDelay, animationDuration){
 
     // set default values if they are not passed
-    this.message = (!message) ? 'text not set!' : message;
+    this.message = (!message) ? 'Hello, world!' : message;
     this.$display = (!$display) ? 'display element not set!' : $display;
     this.animationDelay = (!animationDelay) ? 0 : animationDelay*1000;
     this.animationDuration = (!animationDuration) ? 3 : animationDuration;
 
-     // create the animated span
+    // create the animated span
     this.$span = $('<span>').css({
         'position': 'absolute',
         'top': '0',
@@ -18,36 +18,27 @@ function TypedMessage($display, message, animationDelay, animationDuration){
         'animation': 'typing '+this.animationDuration+'s steps('+this.message.length+',end)'
     }).html('&nbsp;');
 
-    this.show = function(){
+    // this function 'outputs' the message forwards (show) or backwards (erase) based on direction passed
+    this.output = function(direction){
         var $span = this.$span;
         var message = this.message;
         var $display = this.$display;
-        $span.css('animation-direction','normal');
-
-        setTimeout( function(){
-            $display.text(message); 
-            $span.appendTo($display);
-        }, this.animationDelay);
+        $span.css('animation-direction', direction);
 
         setTimeout( function(){
             $display.text(message);
-        }, this.animationDelay + (1000*this.animationDuration + 10) ) ;
-
-        return this;
-    };
-
-    this.erase = function(){
-        var $span = this.$span;
-        var $display = this.$display;
-        $span.css('animation-direction','reverse');
-        
-        setTimeout( function(){
             $span.appendTo($display);
         }, this.animationDelay);
 
         setTimeout( function(){
-            $display.html('');
-        }, this.animationDelay + (1000*this.animationDuration) - 10 ) ;
+            if (direction == 'reverse') {
+                $display.html('');
+                animationDelay = 0;
+            } else {
+                $display.text(message);
+            }
+        }, this.animationDelay + (1000*this.animationDuration) ) ;
+
         return this;
     };
 
